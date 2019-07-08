@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<a href= {% url 'Pantry' %}><button>Go back to the Pantry</button></a>
+<br>
+<br>
+<table class="darkTable">
+    {% if response %}
+    {% for i in response %}
+    <td> {{i}} </td>
+    {% endfor%}
+    {% endif %}
+</table>    
+
+{% endblock content %}

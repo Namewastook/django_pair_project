@@ -1,0 +1,18 @@
+#profile-main {
+    background: black;
+    height: 100vh;
+}
+
+#navbar {
+    background: black;
+}
+
+#footer {
+    width: 100vw;
+}
+
+#footer-info {
+    background: black;
+    color: white;
+    text-align: center;
+}
