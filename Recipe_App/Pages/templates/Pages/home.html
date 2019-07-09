@@ -1,13 +1,24 @@
+{% extends 'base.html' %}
 {% block content %}
+<div class="hello">
+
+
 {% if user.is_authenticated %}
-  Hi {{ user.username }}! Welcome to our site!
-  <a href="{% url 'ProfileCreate' %}"><button>Profile</button></a>
-
+<a href="{% url 'logout' %}"><button class="btns">Logout</button></a>
+<h2  class="form-check">Hi {{ user.username }}! Welcome to our site!</h2>
+  <br>
+  <a href="{% url 'Pantry' %}"><button class="btns2">Menu</button></a>
+    <br>
+    <br>
+    <br>
+  <a href="{% url 'ProfileCreate' %}"><button class="btns2">Profile</button></a>
+</div>
 {% else %}
-  <p>Please Login To Continue</p>
-    <a href="{% url 'login' %}"><button>Login</button></a>
+  <p class="form-check">Please Login To Continue</p>
+    <a href="{% url 'login' %}"><button class="btns2">Login</button></a>
 
-  <p>Need an acc?</p>
-  <a href="{% url 'SignUp' %}"><button>Sign Up</button></a>
+  <p class="form-check">Need an account?</p>
+  <a href="{% url 'SignUp' %}"><button class="btns2">Sign Up</button></a>
 {% endif %}
+  </div>
 {% endblock %}

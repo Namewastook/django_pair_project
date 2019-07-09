@@ -1,14 +1,72 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="hello">
+<a href="{% url 'logout' %}">
+        <button class='btns'>
+            Logout
+        </button>
+    </a>
 <div id="profile-main">
 <form method="POST" action="{% url "Add" %}">
     {% csrf_token %}    
-  <input type="text" name="first" value="Justin">
-  <input type="text" name="last" value="Ahmann">
-  <input type="text" name="username" value="jahmann">
-  <input type="text" name="aboutyou" value="Testing">
-  <input type="submit" value="Submit">
-</form>
+  {% comment %} <input type="text" name="first" placeholder="First Name">
+  <input type="text" name="last" placeholder="Last Name">
+  <input type="text" name="username" placeholder="UserName">
+  <input type="text" name="aboutyou" placeholder="About you">
+  <input type="submit" placeholder="Submit">
+</form> {% endcomment %}
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        {% comment %} <label for="first">First Name</label> {% endcomment %}
+      </div>
+      <div class="col-75">
+        <input type="text" class="fname" name="first" placeholder="Your first name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        {% comment %} <label for="last">Last Name</label> {% endcomment %}
+      </div>
+      <div class="col-75">
+        <input type="text" class="fname" name="last" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        {% comment %} <label for="username">Username</label> {% endcomment %}
+      </div>
+      <div class="col-75">
+        <input type="text" class="fname" name="username" placeholder="Your User Name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        {% comment %} <label for="subject">Subject</label> {% endcomment %}
+      </div>
+      <div class="col-75">
+        <textarea class="fname" name="aboutyou" placeholder="Tell Us Something About You.." style="height:200px"></textarea>
+      </div>
+    </div>
+      <br>
+     <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+
+    {% comment %} <div class="row">
+      <a href="{% url 'update' person.id %}"input type="submit" value="Update">
+    </div> {% endcomment %}
+
+    {% comment %} <div class="row">
+      <a href="{% url 'delete' person.id %}" input type="submit" value="Delete">
+    </div> {% endcomment %}
+
+
+  </form>
+
+
+
 </div>
 
 {% endblock content %}

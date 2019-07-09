@@ -29,24 +29,32 @@ def add_profile(request):
 
         new_profile.save()
 
-    return redirect("/meals/")
+        return redirect("/meals/")
 
-def update_profile(request, id):
-    to_update = Profile.objects.get(id=id)
-    if request.method == "POST":
+    return render(request, 'Pages/profile')
 
-        for key, value in request.POST.items():
+# def update_profile(request, id):
+#     to_update = Profile.objects.get(id=id)
+#     if request.method == "POST":
 
-            if (value and key != "csrfmiddlewaretoken"):
-                setattr(to_update, key, value)
+#         for key, value in request.POST.items():
 
-        to_update.save()
+#             if (value and key != "csrfmiddlewaretoken"):
+#                 setattr(to_update, key, value)
 
-        return redirect('directory')
+#         to_update.save()
 
-    context={
-        "id": id,
-        "update_profile": to_update
-    }
+#         return redirect("/meals/")
 
-    return render(request, 'Pages/profile.html', context=context)
+#     context={
+#         "id": id,
+#         "update_profile":to_update
+#     }
+
+#     return render(request, 'Pages/profile', context=context)
+
+# def delete_profile(request, id):
+#     to_delete = Profile.objects.get(id=id)
+#     to_delete.delete()
+    
+#     return redirect("Registration/signup")
