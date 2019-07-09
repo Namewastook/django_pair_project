@@ -1,16 +1,32 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<a href="{% url 'logout' %}">
+        <button class="btns">
+            Logout
+        </button>
+    </a>
 
-<a href= {% url 'Pantry' %}><button>Go back to the Pantry</button></a>
+<div class="food">
+
+<a href= {% url 'Pantry' %}><button class="btns2">Go back to the Pantry</button></a>
 <br>
 <br>
-<table class="darkTable">
-    {% if response %}
-    {% for i in response %}
-    <td> {{i}} </td>
-    {% endfor%}
-    {% endif %}
-</table>    
+<table class="table table-dark">
+   {% if response %}
+   {% for i in response %}
+   <tr>
+       <td>Recipe Name: {{i.rec_label}} </td>
+       <td>Servings: {{i.rec_yield}} </td>
+       <td>Calories: {{i.rec_calories}}</td>
+       <td>Grams of Fat: {{i.rec_fat_quanity}}</td>
+       <td>Grams of Carbs: {{i.rec_carbs_quanity}}</td>
+       <td>Grams of Protein: {{i.rec_protein_quanity}}</td>
+   </tr>
+   {% endfor%}
+   {% endif %}
+</table>
+
+</div>
 
 {% endblock content %}
