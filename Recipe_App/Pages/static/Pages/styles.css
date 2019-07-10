@@ -52,9 +52,23 @@
 .form-check {
   color: white;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  width: 50%;
+  margin: 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 input[type=text], select, textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=password], select, textarea {
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
@@ -91,12 +105,6 @@ input[type=submit]:hover {
   background-color: rgb(0, 0, 0);
 }
 
-.container {
-  /* border-radius: 5px;
-  background-color:transparent;
-  padding: 20px; */
-}
-
 .fname {
   background-color: transparent;
   color: red;
@@ -125,15 +133,11 @@ input[type=submit]:hover {
   margin-top: 10px;
 }
 
-/* Clear floats after the columns */
-
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
@@ -142,4 +146,12 @@ input[type=submit]:hover {
   }
 }
 
-</style>
+.LogoutDiv {
+  float: right;
+}
+
+.myCon {
+  width: 100%;
+  max-width: 100%;
+  padding: 0px;
+}
