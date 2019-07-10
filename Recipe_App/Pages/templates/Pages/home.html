@@ -2,23 +2,37 @@
 {% block content %}
 <div class="hello">
 
+  {% if user.is_authenticated %}
 
-{% if user.is_authenticated %}
-<a href="{% url 'logout' %}"><button class="btns">Logout</button></a>
-<h2  class="form-check">Hi {{ user.username }}! Welcome to our site!</h2>
+  <div class="container myCon">
+    <div class="row">
+      <div class="col-6">
+        <h2 class="form-check">Hi {{ user.username }}! Welcome to our site!</h2>
+      </div>
+      <div class="col-6 LogoutDiv">
+        <a href="{% url 'logout' %}">
+          <button class="btns">
+            Logout
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
   <br>
   <a href="{% url 'Pantry' %}"><button class="btns2">Menu</button></a>
-    <br>
-    <br>
-    <br>
+  <br>
+  <br>
+  <br>
   <a href="{% url 'ProfileCreate' %}"><button class="btns2">Profile</button></a>
 </div>
 {% else %}
-  <p class="form-check">Please Login To Continue</p>
-    <a href="{% url 'login' %}"><button class="btns2">Login</button></a>
+<p class="form-check">Please Login To Continue</p>
+<a href="{% url 'login' %}"><button class="btns2">Login</button></a>
 
-  <p class="form-check">Need an account?</p>
-  <a href="{% url 'SignUp' %}"><button class="btns2">Sign Up</button></a>
+<p class="form-check">Need an account?</p>
+<a href="{% url 'SignUp' %}"><button class="btns2">Sign Up</button></a>
 {% endif %}
-  </div>
+</div>
 {% endblock %}
