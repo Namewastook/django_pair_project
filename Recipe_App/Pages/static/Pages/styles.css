@@ -1,86 +1,70 @@
 #profile-main {
-    
-    height: 100vh;
+  height: 100vh;
 }
 
 #navbar {
-    background: black;
+  background: black;
 }
 
 #footer {
-    width: 100vw;
+  width: 100vw;
 }
 
 #footer-info {
-    color:red;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
+  color: red;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
 
 #header_info {
-    color: black;
-    text-align: center;
-    font-family: Arial;
-    position:absolute;
-    top:100px;
-
+  color: black;
+  text-align: center;
+  font-family: Arial;
+  position: absolute;
+  top: 100px;
 }
 
 .header {
-    font-size: 75px;
-    text-align: center;
-    color: red;
-    background-color: rgb(65, 56, 33);
-
+  font-size: 75px;
+  text-align: center;
+  color: red;
+  background-color: rgb(65, 56, 33);
 }
 
 .food {
-    background-image: url(img/pepe-nero-FHtP6sKF7bY-unsplash.jpg);
-    background-repeat:no-repeat;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
+  background-image: url(img/pepe-nero-FHtP6sKF7bY-unsplash.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
 }
 
 .hello {
-    background-image: url(img/hue12-photography-rScZlwNBezc-unsplash.jpg);
-    background-repeat:no-repeat;
-    width: 100%;
-    height: 110vh;
-    background-size: cover;
+  background-image: url(img/hue12-photography-rScZlwNBezc-unsplash.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 110vh;
+  background-size: cover;
 }
 
-
-.form-check{
-    color:white; 
-    text-shadow: -1px 1px 0 #000,
-				  1px 1px 0 #000,
-				  1px -1px 0 #000,
-				  -1px -1px 0 #000;
-    }
-
-#move {
-      margin-left:312px;
+.form-check {
+  color: white;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
-
-<style>
-/* * {
-  box-sizing: border-box;
-} */
 
 input[type=text], select, textarea {
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  resize: vertical; 
+  resize: vertical;
 }
 
 label {
-    padding: 12px 12px 12px 0;
-    display: inline-block; 
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
 
 input[type=submit] {
@@ -103,51 +87,46 @@ input[type=submit] {
   /*float: right;*/
 }
 
-
 input[type=submit]:hover {
-  background-color:rgb(0, 0, 0) ;
+  background-color: rgb(0, 0, 0);
 }
 
 .container {
   /* border-radius: 5px;
   background-color:transparent;
   padding: 20px; */
-
 }
+
 .fname {
-    background-color: transparent;
-    color: red;
+  background-color: transparent;
+  color: red;
+}
 
-  }
+::placeholder {
+  background-color: transparent;
+  color: red;
+}
 
-  ::placeholder {
-    background-color: transparent;
-    color: red;
-
-  }
-
-.btns{
+.btns {
   background-color: red;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  /*float: right;*/
+  display: block;
+  float: right;
   color: white;
-  text-shadow: -1px 1px 0 #000,
-				  1px 1px 0 #000,
-				  1px -1px 0 #000,
-          -1px -1px 0 #000;
-  margin-left:1634px;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
 }
 
-.col-75 { 
-    float: left;
-    width: 75%;
-    margin-top: 10px;
-} 
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 10px;
+}
 
 /* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
@@ -155,11 +134,12 @@ input[type=submit]:hover {
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
 }
-</style>
 
+</style>
