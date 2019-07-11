@@ -1,100 +1,97 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<a href="{% url 'logout' %}">
-        <button class="btns">
-            Logout
-        </button>
-    </a>
+<div class="LogoutDiv">
+  <a href="{% url 'logout' %}">
+    <button class="btns">
+      Logout
+    </button>
+  </a>
+</div>
 
 <div class="food">
-<br>
-<h2  class="form-check">Please check back frequently for new selection options!</h2>
-<br>
-<h4  class="form-check">Please select one from each catagory:</h4>
-<br>
-
-<form action="{% url 'Recipe' %}" method="POST">
-{% csrf_token %}
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-<p class="form-check">Main dish:</p>
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="beef" name="main" id="defaultCheck1" required>
-  <label class="form-check-label" for="defaultCheck1" autocomplete="off">
-    Beef
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="chicken" name="main" id="defaultCheck2">
-  <label class="form-check-label" for="defaultCheck2" autocomplete="off">
-    Chicken
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="tofu" name="main" id="defaultCheck3">
-  <label class="form-check-label" for="defaultCheck3" autocomplete="off">
-    Tofu
-  </label>
-</div>
-</div>
-<br>
-<div class="col-sm">
-<p  class="form-check">Side dish:</p>
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="beans" name="side" id="defaultCheck4" required>
-  <label class="form-check-label" for="defaultCheck4" autocomplete="off">
-    Beans
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="carrots" name="side" id="defaultCheck5">
-  <label class="form-check-label" for="defaultCheck5" autocomplete="off">
-    Carrots
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="kale" name="side" id="defaultCheck6">
-  <label class="form-check-label" for="defaultCheck6" autocomplete="off">
-    Kale
-  </label>
-</div>
-</div>
-<br>
-<div class="col-sm">
-<p class="form-check">Extras:</p>
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="pasta" name="extras" id="defaultCheck7" required>
-  <label class="form-check-label" for="defaultCheck7" autocomplete="off">
-    Pasta
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="eggs" name="extras" id="defaultCheck8">
-  <label class="form-check-label" for="defaultCheck8" autocomplete="off">
-    Eggs
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" value="tomato" name="extras" id="defaultCheck9">
-  <label class="form-check-label" for="defaultCheck9" autocomplete="off">
-    Tomato
-  </label>
-</div>
-</div>
-</div>
-<br>
-<a href= {% url 'Recipe' %} type ="Submit" value="Submit"><button class="btns2">Submit</button></a>
-<br>
-<br>
-<input type="button" class="btns2" value="Clear all choices" onClick="this.form.reset()" />
-</form>
   <br>
+  <h2 class="form-check">Please check back frequently for new selection options!</h2>
   <br>
-</div>
-<a href= {% url 'ProfileCreate' %}><button class="btns2" id="move">To Profile</button></a>
+  <h4 class="form-check">Please select one from each catagory:</h4>
+  <br>
 
+  <form action="{% url 'Recipe' %}" method="POST">
+    {% csrf_token %}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <p class="form-check">Main dish:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="beef" name="main" id="defaultCheck1" required>
+            <label class="form-check-label" for="defaultCheck1" autocomplete="off">Beef</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="chicken" name="main" id="defaultCheck2">
+            <label class="form-check-label" for="defaultCheck2" autocomplete="off">Chicken</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="tofu" name="main" id="defaultCheck3">
+            <label class="form-check-label" for="defaultCheck3" autocomplete="off">Tofu</label>
+          </div>
+        </div>
+        <br>
+        <div class="col-sm">
+          <p class="form-check">Side dish:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="beans" name="side" id="defaultCheck4" required>
+            <label class="form-check-label" for="defaultCheck4" autocomplete="off">Beans</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="carrots" name="side" id="defaultCheck5">
+            <label class="form-check-label" for="defaultCheck5" autocomplete="off">
+              Carrots
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="kale" name="side" id="defaultCheck6">
+            <label class="form-check-label" for="defaultCheck6" autocomplete="off">
+              Kale
+            </label>
+          </div>
+        </div>
+        <br>
+        <div class="col-sm">
+          <p class="form-check">Extras:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="pasta" name="extras" id="defaultCheck7" required>
+            <label class="form-check-label" for="defaultCheck7" autocomplete="off">
+              Pasta
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="eggs" name="extras" id="defaultCheck8">
+            <label class="form-check-label" for="defaultCheck8" autocomplete="off">
+              Eggs
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="tomato" name="extras" id="defaultCheck9">
+            <label class="form-check-label" for="defaultCheck9" autocomplete="off">
+              Tomato
+            </label>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a href={% url 'Recipe' %} type="Submit" value="Submit"><button class="btns2">Submit</button></a>
+      <br>
+      <br>
+      <input type="button" class="btns2" value="Clear all choices" onClick="this.form.reset()" />
+    </div>
+  </form>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <br>
+        <a href={% url 'ProfileCreate' %}><button class="btns2" id="move">To Profile</button></a>
+      </div>
+    </div>
+  </div>
 </div>
-
 {% endblock content %}

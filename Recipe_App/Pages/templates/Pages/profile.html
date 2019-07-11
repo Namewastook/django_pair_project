@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="hello">
-<a href="{% url 'logout' %}">
-        <button class='btns'>
-            Logout
-        </button>
-    </a>
+<div class="LogoutDiv">
+  <a href="{% url 'logout' %}">
+    <button class="btns">
+      Logout
+    </button>
+  </a>
+</div>
 <div id="profile-main">
 <form method="POST" action="{% url "Add" %}">
     {% csrf_token %}    
